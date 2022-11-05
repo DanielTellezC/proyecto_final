@@ -1,0 +1,45 @@
+<%- layout('layouts/main.ejs') %>
+
+<h1 class="titulo_tareas">Registro de las tareas</h1>
+
+<div class="tarjeta_tareas">
+    <form action="/tasks/add" method="post">
+        <div class="registro_tareas">
+            <label for="titulo_tareas">Titulo:</label>
+            <input id="titulo_tareas" name="title" type="text">
+            <label for="descripcion_tareas">Descripción:</label>
+            <textarea name="description" id="descripcion_tareas" cols="30" rows="10"></textarea>
+        </div>
+        <button class="btn_submit" type="submit">Guardar</button>
+    </form>
+</div>
+
+<div class="contenedor_tareas">
+    <% task.forEach(function(task){ %>
+    <div class="cartas">
+        <div class="header_cartas">
+            <%= task.title %>
+        </div>
+        <div class="cuerpo_cartas">
+            <%= task.description %>
+        </div>
+        <div class="footer_cartas">
+            Estado de la tarjeta:
+            <% if(task.done == true) { %>
+            <span class="material-symbols-outlined">
+                close
+            </span>
+            <% }else{ %>
+                <a href="">
+            <span class="material-symbols-outlined">
+                done
+            </span>
+                </a>
+            <% } %>
+            <span class="material-symbols-outlined">
+                delete
+                </span>
+        </div>
+    </div>
+    <% }); %>
+</div>

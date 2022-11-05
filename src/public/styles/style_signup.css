@@ -1,0 +1,75 @@
+body{
+    background-color: #f1f1f1;
+}
+/* diseño del formulario de Signup */
+
+/* posicion del formulario dentro del cuerpo */
+.formulario{
+    max-width: 750px;
+    min-height: 500px;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #ffffff;
+    text-align: center;
+    border-radius: 10px;
+}
+
+
+/* diseño de la posicion del titulo Signup header del registro */
+.formulario header{
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+    border-radius: 10px 10px 0px 0px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    color: #ffffff;
+}
+
+/* Bloques de registro del formulario */
+.formulario .contenedor_form{
+    display: grid;
+    grid-template-columns: repeat(6, 2fr);
+    grid-template-rows: repeat(2, 1fr);
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.contenedor_form label{
+    grid-row: 2;
+    grid-column: 3;
+    text-align: left;
+    padding: 5px;
+}
+.contenedor_form input{
+    grid-row: 2;
+    grid-column: 4;
+    padding: 5px;
+    border-radius: 5px;
+    border: 3px solid #f1f1f1;
+    float: left;
+}
+.contenedor_form select{
+    padding: 5px;
+    border-radius: 5px;
+    border: 3px solid #f1f1f1;
+    grid-row: 2;
+    grid-column: 4;
+}
+
+/* Botón de submit o de registro de los datos en el signup */
+.contenedor_submit_form{
+    grid-row: 2;
+}
+.contenedor_submit_form button{
+    background-color:  rgb(170, 255, 90);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 5px;
+    color: #ffffff;
+    font-weight: bold;
+    border: none;
+}
+
+.contenedor_submit_form button:hover{
+    background-color: rgb(140, 255, 32);
+}

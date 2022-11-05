@@ -1,0 +1,53 @@
+.tarjeta_presentacion{
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    width: 80%;
+    height: 500px;
+    margin: auto;
+    margin-top: 50px;
+    background-color: #ffffff;
+    text-align: center;
+    border-radius: 10px;
+    border: 3px solid #f1f1f1;
+    font-size: 90%;
+}
+
+.header_presentacion{
+    color: #515151;
+    display: flex;
+    flex-direction: column;
+    grid-row: 1;
+    width: 90%;
+    height: 90%;
+    margin: auto;
+    text-align: left;
+    border-bottom: 3px solid #a1a1a1;
+    justify-content: center;
+}
+.header_presentacion h2{
+    color: rgb(150, 255, 40);
+}
+
+.cuerpo_presentacion{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    grid-row: 2;
+    width: 90%;
+    height: 90%;
+    margin: auto;
+    border-radius: 10px;
+    background-color: #f1f1f1;
+}
+
+.footer_presentacion{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    grid-row: 3;
+    width: 90%;
+    height: 90%;
+    margin: auto;
+    background-color: #f1f1f1;
+    border-radius: 10px;
+}

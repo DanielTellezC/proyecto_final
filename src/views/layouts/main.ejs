@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style_signup.css">
+    <link rel="stylesheet" href="styles/style_header.css">
+    <link rel="stylesheet" href="styles/style_alertas.css">
+    <link rel="stylesheet" href="styles/tarjeta_presentacion.css">
+    <link rel="stylesheet" href="styles/styles_tareas.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- Menú que se muestra para los usuarios que no están autenticados -->
+    <% if(!user) { %> 
+    <div class="content_navbar">
+        <ul>
+            <li class="navbar_logo">Logo</li>
+            <li class="navbar_menu"><span class="material-symbols-outlined">menu</span></a></li>
+            <li class="navbar_link"><a href="/signin">Sign in</a></li>
+            <li class="navbar_link"><a href="/signup">Sign up</a></li>
+        </ul>
+    </div>
+
+    <% } %>
+
+    <!-- Menú que se muestra para los usuarios administrador -->
+    <% if(user){ %>
+    <div class="content_navbar">
+        <ul>
+            <li class="navbar_logo"><a href="/">Logo</a></li>
+            <li class="navbar_menu"><a href=""><span class="material-symbols-outlined">menu</span></a></li>
+            <li class="navbar_link"><a href="/tasks">Tareas</a></li>
+            <li class="navbar_link"><a href="/">Index</a></li>
+            <li class="navbar_link"><a href="/profile">Perfil</a></li>
+            <li class="navbar_link"><a href="/logout">Cerrar Sesión</a></li>
+            
+        </ul>
+        
+    </div>
+    <% } %>
+<!--Mensaje de error de signup para ver si ya se encuentra registrado el ususario -->
+    <% if(signupMensaje.length > 0){ %>
+        <div class="mensaje_signup"><b><%= signupMensaje %></b></div>
+    <% } %>
+
+    <% if(signinMensaje.length > 0){ %>
+        <div class="mensaje_signin"><b><%= signinMensaje %></b></div>
+    <% } %>
+
+    <%- body %>
+        
+<script src="javaScript/navbar.js"></script>
+</body>
+</html>

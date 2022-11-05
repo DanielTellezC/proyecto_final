@@ -1,0 +1,100 @@
+.titulo_tareas{
+    margin: 25px;
+    text-transform: capitalize;
+}
+.tarjeta_tareas{
+    margin: 25px;
+}
+.registro_tareas input {
+    display: grid;
+    grid-template-columns: repeat(1, 2fr);
+    border-radius: 5px;
+    padding: 5px;
+    border: 2px solid #d1d1d1;
+}
+.registro_tareas input:focus {
+    outline: none;
+    border-color: aqua;
+    border: 3px solid turquoise;
+}
+.registro_tareas textarea{
+    border-radius: 5px;
+    padding: 5px;
+    border: 2px solid #d1d1d1;
+}
+.btn_submit{
+    background-color:  rgb(170, 255, 90);
+    padding: 15px; 
+    border-radius: 10px;
+    border: none;
+    color: #ffffff;
+    font-weight: bold;
+    margin: 15px;
+}
+.btn_submit:hover{
+    background-color: rgb(140, 255, 32);
+}
+
+.contenedor_tareas{
+    margin: 25px;
+    display: grid;
+    gap: 1rem;
+    grid-auto-flow: dense;
+    grid-auto-rows: 22rem;
+    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+}
+.cartas{
+    grid-column: span 1;
+}
+.header_cartas{
+    background: rgba(9,9,121,1);
+    padding: 10px;
+    height: 15%;
+    color: #ffffff;
+    text-transform: uppercase;
+    text-align: center;
+    border-radius: 10px 10px 0 0;
+    overflow: auto;
+}
+.cuerpo_cartas{
+    background-color: #ffffff;
+    padding: 10px;
+    height: 60%;
+    color: #515151;
+    overflow: auto;
+}
+.footer_cartas{
+    height: 10%;
+    border-radius: 0 0 10px 10px;
+    background-color:rgba(2,0,36,1);
+    padding-left: 15px;
+    color: #ffffff;
+    list-style: none;
+}
+
+
+.cuerpo_cartas::-webkit-scrollbar, .header_cartas::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+.cuerpo_cartas::-webkit-scrollbar:vertical, .header_cartas::-webkit-scrollbar:vertical {
+    width:10px;
+}
+
+.cuerpo_cartas::-webkit-scrollbar-button:increment,.cuerpo_cartas::-webkit-scrollbar-button, .header_cartas::-webkit-scrollbar-button:increment,.header_cartas::-webkit-scrollbar-button {
+    display: none;
+} 
+
+.cuerpo_cartas::-webkit-scrollbar:horizontal, .header_cartas::-webkit-scrollbar:horizontal {
+    height: 10px;
+}
+
+.cuerpo_cartas::-webkit-scrollbar-thumb, .header_cartas::-webkit-scrollbar-thumb {
+    background-color: #797979;
+    border-radius: 20px;
+    border: 2px solid #f1f2f3;
+}
+
+.cuerpo_cartas::-webkit-scrollbar-track, .header_cartas::-webkit-scrollbar-track {
+    border-radius: 10px;  
+}

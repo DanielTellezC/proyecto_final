@@ -1,0 +1,63 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.content_navbar{
+    width: 100%;
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+}
+
+.content_navbar ul{
+    display: flex;
+    align-items: center;
+}
+
+.content_navbar ul li{
+    list-style-type: none;
+    padding: 30px;
+}
+.content_navbar ul li a{
+    text-decoration: none;
+    color: #ffffff;
+    
+}
+/* estilo de el posicionamiento del logo */
+.navbar_logo{
+    flex: 1;
+    user-select: none;
+}
+.navbar_logo a:hover{
+    color: #a1a1a1;
+}
+
+/* Estilo y vision del boton para hacer responsiva la página */
+.navbar_menu{
+    display: none;
+}
+
+/* Rutas alternas del navbar */
+.navbar_link{
+    display: flex;
+}
+
+.navbar_link:hover{
+    background-color: rgba(0,0,0,50%);
+}
+
+@media (max-width: 600px) {
+    .content_navbar ul{
+        flex-wrap: wrap;
+    }
+    .navbar_menu{
+        display: block;
+    }
+    .navbar_link{
+        display: none;
+        width: 100%;
+        text-align: center;
+    }
+    .active{
+        display: block;
+    }
+}
