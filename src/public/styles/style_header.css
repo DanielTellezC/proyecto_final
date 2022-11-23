@@ -2,62 +2,201 @@
     padding: 0;
     margin: 0;
 }
-
-.content_navbar{
-    width: 100%;
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+.body{
+    font-family: Helvetica, Arial, sans-serif;
 }
-
+/* Estilo de la barra de navegacion que se va a encontrar en el header principal que todos
+pueden visualizar */
+.content_navbar{
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 100%;
+}
 .content_navbar ul{
     display: flex;
     align-items: center;
+    justify-content: center;
+}
+.content_navbar ul li{
+    list-style: none;
+    align-items: center;
 }
 
-.content_navbar ul li{
-    list-style-type: none;
-    padding: 30px;
-}
 .content_navbar ul li a{
     text-decoration: none;
     color: #ffffff;
     
 }
-/* estilo de el posicionamiento del logo */
-.navbar_logo{
-    flex: 1;
-    user-select: none;
-}
-.navbar_logo a:hover{
-    color: #a1a1a1;
+.content_navbar ul .navbar_logo{
+    /* flex: 1;*/
 }
 
-/* Estilo y vision del boton para hacer responsiva la página */
-.navbar_menu{
-    display: none;
+.navbar_logo a{
+    font-family: 'Road Rage', cursive !important;
+    font-size: 50px !important;
+}
+.content_navbar ul li{
+    padding: 15px;
+}
+.content_navbar ul li a{
+    text-decoration: none;
 }
 
-/* Rutas alternas del navbar */
-.navbar_link{
+/* Estilo de ma imagen que ira en la página principal que todos van a poder visualizar */
+.imagen_principal{
+    background-image: linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)), url('../img/imagen_portada.jpg');
+    position: absolute;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    z-index: -1;
+}
+
+.contenedor_menu{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+}
+.menu_posicionizquierda{
+    grid-column: 1;
+    position: absolute;
+    width: 50%;
+    height: fit-content;
     display: flex;
+    background-color: none;
+}
+.menu_posicionizquierda ul{
+    width: fit-content;
+    margin-left: 25px;
+    height: 100%;
+    list-style: none;
+    padding: 100px 0;
+}
+.menu_posicionizquierda ul li{
+    transition: 0.3s;
+    font-family:'Road Rage', cursive !important;
+    color: #ffffff;
+    text-decoration: none;
+    margin: 25px 15px;
+    font-size: 50px;
+    text-align: center;
+}
+.menu_posicionizquierda ul li:hover{
+    transition: 0.5s;
+    color: aqua;
+    cursor: hand;
+    cursor: pointer;
 }
 
-.navbar_link:hover{
-    background-color: rgba(0,0,0,50%);
+.menu_posicionderecha{
+    grid-column: 2;
+    width: 50%;
+    height: fit-content;
+    background-color:none ;
 }
 
-@media (max-width: 600px) {
-    .content_navbar ul{
-        flex-wrap: wrap;
-    }
-    .navbar_menu{
-        display: block;
-    }
-    .navbar_link{
-        display: none;
+.cuerpo_index{
+    position: fixed;
+    background-color: black;
+    z-index: -1;
+}
+
+/* Tarjeta de signup */
+.fondo_signup{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #f1f1f1;
+}
+
+.contenedor_signup{
+    width: 75%;
+    height: 75%;
+    margin: 5% auto;
+    border-radius: 10px;
+    display: grid;
+    box-shadow: 15px -10px rgba(0, 0, 0, 0.164);
+    grid-template-columns: repeat(2, 1fr);
+}
+.signup_izquierdo{
+    grid-column: 1;
+    border-radius: 10px 0 0 10px;
+    background-color: #e1e1e1;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+}
+.signup_logo{
+    grid-row: 1;
+    font-family: 'Road Rage', cursive !important;
+    text-align: center;
+    margin: auto;
+}
+.signup_logo h1{
+    
+    color: turquoise;
+}
+.signup_formato{
+    grid-row: 2;  
+}
+.signup_formato ul{
+    list-style: none;
+}
+.signup_datos{
+    text-align: center;
+   
+}
+
+.signup_datos input{
+    width: 250px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    margin: 5px;
+    border-bottom: 2px solid turquoise;
+}
+.signup_datos input:focus{
+    outline: 2px solid turquoise;
+}
+
+.signup_derecho{
+    display: flex;
+    grid-column: 2;
+    border-radius: 0 10px 10px 0;
+    background: linear-gradient(45deg, turquoise 0%, black);
+    text-align: center;
+}
+.signup_derecho p{
+    margin: auto;
+}
+
+@media (max-width: 700px) {
+    .fondo_signup{
         width: 100%;
-        text-align: center;
+        height: 100%;
+        position: absolute;
     }
-    .active{
-        display: block;
+    .contenedor_signup{
+        display: grid;
+        position: absolute;
+        box-shadow: none;
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: none;
+        margin: 0;
+        width: 100%;
+        height: 100%;
+    }
+    .signup_izquierdo{
+        grid-row: 1;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        border-radius: 0;
+        padding-bottom: 100px;
+    }
+    .signup_derecho{
+        grid-row: 2;
+        grid-column: 1;
+        border-radius: 0%;
     }
 }
